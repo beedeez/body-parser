@@ -10,7 +10,7 @@ var bodyParser = require('..')
  * @const
  * whether current node version has brotli support
  */
-var hasBrotliSupport = 'brotli' in process.versions
+var hasBrotliSupport = 'createBrotliDecompress' in require('zlib')
 
 describe('bodyParser.urlencoded()', function () {
   before(function () {
